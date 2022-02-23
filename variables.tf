@@ -1,3 +1,12 @@
+# XOSS Organizations Terraform Lables Variables
+# ----------------------------------------------------------------------------------------------------------------------
+
+variable "attributes" {
+  type        = list(string)
+  default     = []
+  description = "Additional attributes (e.g. `public`)"
+}
+
 variable "context" {
   type = object({
     organization = string
@@ -6,5 +15,5 @@ variable "context" {
     product      = string
     tags         = map(string)
   })
-  description = "Default context for naming and tagging purpose"
+  description = "Default environmental context"
 }
